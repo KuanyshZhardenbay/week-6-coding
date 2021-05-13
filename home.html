@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome!</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+<body id="body">
+    <header id="header">
+        <a href="#" class="logo">Safe Room</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Panic attack and hysterics</a></li>
+            <li><a href="#">Help people around you</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </header>
+    <section id="section">
+        <h2 id="text"><span>Welcome to the</span><br />SafeRoom</h2>
+        <img src="bird1.png" id="bird1" />
+        <img src="bird2.png" id="bird2" />
+        <img src="forest.png" id="forest" />
+        <a href="#mainblock" id="btn">Explore</a>
+        <img src="rocks.png" id="rocks" />
+        <img src="water.png" id="water" />
+    </section>
+
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#emptydiv1">
+                    <span class="icon"><i class="fas fa-user-nurse"></i></span>
+                    <span class="title">Panick Attacks and Hysterics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#emptydiv2">
+                    <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                    <span class="title">Help people around you</span>
+                </a>
+            </li>
+            <li>
+                <a href="#emptydiv3">
+                    <span class="icon"><i class="fab fa-weixin"></i></span>
+                    <span class="title">About Us</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div style="width:100%; height:100%; z-index:4; display:flex" class="sec">
+        <div id="mainblock">
+            <div id="welcome_block">
+                <h2>What is the "SafeRoom"?</h2>
+                <div style="width: 800px">
+                    <p>
+                        An extreme help site for helping people, who struggles with anxiety,
+                        panic attacks or/and hysterics at the moment. There are some tips and ways
+                        to deal with panic attacks, helpline for extremal situations, numbers of available
+                        therapists, resources to get distracted so people can faster and easier calm down
+                        and recover from the unforeseen situations.
+
+                    </p>
+                </div>
+            </div>
+            <div id="emptydiv1" style="width:100%; height: 55px;">
+
+            </div>
+            <div id="panicblock">
+                <center><p id="block_header">Panick Attacks and Hysterics</p></center>
+            </div>
+            <div id="emptydiv2" style="width:100%; height: 55px;">
+
+            </div>
+            <div id="helpblock">
+                <center><p id="block_header">Help people around you</p></center>
+            </div>
+            <div id="emptydiv3" style="width:100%; height: 55px;">
+
+            </div>
+            <div id="aboutblock">
+                <center><p id="block_header">About Us</p></center>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Panic attacks and hysterics</a></li>
+                            <li><a href="#">Tips for quickly calm down</a></li>
+                            <li><a href="#">Help people around you</a></li>
+                            <li><a href="#">If you want relax</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About Us</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Donate</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Safe Room</h3>
+                        <p>
+                            An extreme help site for helping people, who struggles with anxiety, panic attacks or/and hysterics at the moment.
+                        </p>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-snapchat"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">Safe Room © 2021</p>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+        function toggleMenu() {
+            let navigation = document.querySelector('.navigation');
+            let toggle = document.querySelector('.toggle');
+            navigation.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        window.addEventListener("scroll", function () {
+            let sidebar = document.querySelector(".navigation");
+            sidebar.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+    </script>
+</body>
+</html>
